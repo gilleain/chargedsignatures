@@ -53,7 +53,8 @@ public class SimpleTestCases {
         phos.addBond(0, 3, IBond.Order.SINGLE);
         phos.addBond(0, 4, IBond.Order.DOUBLE);
         
-        phos.getAtom(1).setCharge(-1.0);
+//        phos.getAtom(1).setCharge(-1.0);
+        phos.getAtom(1).setFormalCharge(-1);
         
 //        testMolecule(phos);
         permutationTest(phos);
@@ -73,8 +74,11 @@ public class SimpleTestCases {
         imidazole.addBond(2, 3, IBond.Order.SINGLE);
         imidazole.addBond(3, 4, IBond.Order.SINGLE);
         
-        imidazole.getAtom(2).setCharge(1.0);
-        imidazole.getAtom(3).setCharge(-1.0);
+//        imidazole.getAtom(2).setCharge(1.0);
+//        imidazole.getAtom(3).setCharge(-1.0);
+        imidazole.getAtom(2).setFormalCharge(1);
+        imidazole.getAtom(3).setFormalCharge(-1);
+
         
 //        testMolecule(imidazole);
         permutationTest(imidazole);

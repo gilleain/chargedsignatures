@@ -22,11 +22,12 @@ public class ChargedAtomSignature extends AbstractVertexSignature {
     protected String getVertexSymbol(int atomIndex) {
         // XXX this is the method with the key difference...
         IAtom atom = atomContainer.getAtom(atomIndex);
-        Double charge = atom.getCharge();
+//        Double charge = atom.getCharge();
+        Integer charge = atom.getFormalCharge();
         if (charge == null) {
             return atom.getSymbol();
         } else {
-            return atom.getSymbol() + atom.getCharge();
+            return atom.getSymbol() + charge;
         }
     }
 
